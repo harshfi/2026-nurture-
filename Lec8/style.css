@@ -1,0 +1,21 @@
+
+*{
+    background-color: black;
+    color: white;
+}
+.parent{
+    border: 2px solid rgb(255, 255, 255);
+}
+
+h2{
+    border: 2px solid rgb(255, 255, 255);
+}
+.child1{
+    float: right;
+}
+.child2{
+    float: left;
+}
+.clear{
+    clear:both
+}
