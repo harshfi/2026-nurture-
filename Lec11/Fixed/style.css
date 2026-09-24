@@ -1,0 +1,23 @@
+ *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            position: relative;
+        }
+        .nav{
+            margin-top: 0px;
+            border: 2px solid black;
+            text-align: center;
+            width: 100vw;
+            position: fixed;
+            top: 0px;
+            background-color: aliceblue;
+            height: 8vh;
+        }
+        a{
+            margin-left: 20px;
+        }
+         .kuchbhi{
+          margin-top: 50px;           
+        }

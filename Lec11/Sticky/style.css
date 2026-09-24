@@ -1,0 +1,14 @@
+ *{
+        text-align: center;
+            
+        }
+        h1{
+            border: 2px solid black;
+            position: sticky;
+            top: 0px;
+            background-color: aliceblue;
+            margin-bottom: 5px;
+        }
+        p{
+            border:1px solid gray
+        }
