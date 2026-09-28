@@ -1,0 +1,27 @@
+.bigbox{
+    height: 20vh;
+    width: 86vw;
+    margin: auto;
+    border: 2px solid black;
+}
+
+.parent{
+    /* border: 2px solid black; */
+    width: 86vw;
+    /* margin-top: 50px; */
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.box1{
+    border:2px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+.end{
+   order:1
+}
+.start{
+    order:-1;
+}
