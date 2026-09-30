@@ -1,0 +1,29 @@
+
+.sideNav{
+    grid-column: 1/4;
+    grid-row:2/16;
+    border-right: 0.3px solid rgb(233, 228, 228) ;
+}
+
+.left1{
+    margin-top: 20px;
+    /* border:2px solid black */
+}
+
+.option{
+    /* border: 1px solid green; */
+    font-size: 20px;
+    margin-left: 60px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: grey;
+}
+
+.option:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.fa-regualar{
+    padding-left: 10px;
+}
