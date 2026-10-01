@@ -1,0 +1,55 @@
+.main{
+    border: 2px solid black;
+    grid-column: 4/16;
+    grid-row:2/16;
+    display: grid;
+    grid-template-columns: repeat(14,1fr);
+    grid-template-rows: repeat(14,1fr);
+
+}
+.offer{
+   grid-column: 1/15;
+   grid-row: 1/2;
+   background-color: orange;
+   border: 0.5px solid black;
+   text-align: center;
+   font-size: 22px;
+   padding-top: 15px;
+   display: flex;
+   justify-content: center;
+}
+.Welcome{
+    display: block;
+    background-color: white;
+    width: 170px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.upgrad{
+    text-decoration: underline;
+}
+.cardContainer{
+    grid-column: 3/12;
+    border: 2px solid black;
+    grid-row: 2/15;
+}
+.cardnav{
+    border: 0.7px solid gray;
+    height: 60px;
+    display: flex;
+    align-items:center;
+    font-size: 24px;
+    gap: 1%;
+}
+.p{
+    text-decoration: none;
+    color: black;
+}
+.foryou{
+    margin-top: 2px;
+    padding-top: 16px;
+    height: 42px;
+    border-bottom: 1px solid black;
+}

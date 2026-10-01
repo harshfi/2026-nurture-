@@ -1,0 +1,64 @@
+
+.sideNav{
+    grid-column: 1/4;
+    grid-row:2/16;
+    border-right: 0.3px solid rgb(233, 228, 228) ;
+}
+
+.left1{
+    margin-top: 20px;
+    width: 80%;
+    border-bottom:0.3px solid grey;
+    margin: auto;
+}
+
+.option{
+    /* border: 1px solid green; */
+    font-size: 20px;
+    margin-left: 60px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: grey;
+}
+
+.option:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.fa-regualar{
+    padding-left: 10px;
+}
+
+.option-title{
+    margin-left: 10px;
+}
+
+#games{
+    position: relative;
+    top:-10px
+}
+.beta{
+    background-color: yellow;
+    width: 150px;
+    
+}
+
+.left2{
+    display: flex;
+    margin: auto;
+    width: 90%;
+    border-bottom: 0.3px solid grey ;
+}
+
+.be{
+     margin-left: 20px;
+    background-color: rgb(207, 103, 7);
+    width: 70px;
+    margin-top: 20px;
+    align-content: center;
+    justify-content: center;
+    padding-left: 30px;
+    height: 50px;
+    border-radius: 23px;
+}
