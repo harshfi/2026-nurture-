@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 603px;
+            width: 80vw;
+            border-bottom: 2px solid black;
+        }
+
+        .box {
+            border: 2px solid black;
+            margin: auto;
+            background-color: rgb(254, 125, 125);
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation-name: drop;
+            animation-duration: 5s;
+            animation-timing-function: cubic-bezier(1, -0.37, 0.58, 1);
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes drop {
+            0% {
+                height: 100px;
+                width: 100px;
+
+                transform: translateY(0px);
+            }
+
+            47% {
+                height: 99px;
+                width: 101px;
+            }
+
+            48% {
+                height: 98px;
+                width: 102px;
+            }
+
+            49% {
+                height: 97px;
+                width: 105px;
+            }
+
+            50% {
+                transform: translateY(500px);
+                height: 96px;
+                width: 107px;
+            }
+
+            51% {
+                height: 97px;
+                width: 105px;
+            }
+
+            52% {
+                height: 98px;
+                width: 102px;
+            }
+
+            53% {
+                height: 99px;
+                width: 101px;
+            }
+
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="box"></div>
+    </div>
+
+</body>
+
+</html>

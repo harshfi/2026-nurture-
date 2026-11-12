@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .card {
+            width: 250px;
+            height: 450px;
+            border: 2px solid black;
+            position: relative;
+            margin: 200px auto;
+            transition-duration: 1s;
+            transition-timing-function: ease-in;
+            transform-style: preserve-3d;
+        }
+
+        .a,
+        .b {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border: 2px solid black;
+        }
+
+        .a {
+            /* background-color: red; */
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0nUk3rKiapxsIHQoX1zA1wOEL-j-T6j62Czc9SzqkPA&s=10);
+            z-index: 1;
+            background-size: contain;
+
+            backface-visibility: hidden;
+
+        }
+
+        .b {
+            background-color: green;
+            transform: rotateY(180deg);
+            text-align: center;
+            /* padding-top: 100px; */
+            font-size: xx-large;
+            /* transition-duration: 1s;
+            transition-timing-function: ease-in;
+            */
+        }
+
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="a"></div>
+        <div class="b">150 rupeeya dega</div>
+    </div>
+
+</body>
+
+</html>
