@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            /* border-radius: 50%; */
+            /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
+
+        }
+
+        .box1 {
+            background-color: aqua;
+            transition: transform 6s cubic-bezier(0.49, -0.19, 0, 1.17);
+            transform: translate(0);
+        }
+
+        .box1:hover {
+
+            /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
+            /* transform: skewX(-10deg) */
+            /* // over all k krrna hain -scale  */
+            /* transform: rotateZ(180deg); */
+            transform: translate(1200px, 800px);
+        }
+
+
+        .box2 {
+
+            /* transition: transform 1s ease-in; */
+            background-color: blue;
+            transition-duration: 1s;
+            transition-timing-function: ease-in;
+            transition-delay: 1s;
+
+        }
+
+        .box2:hover {
+            background-color: red;
+
+            /* transform: scale3d(0.5, 0.6, 0.6) */
+        }
+
+        /* .box3 {
+            transition: transform 1s ease-in;
+            background-color: pink;
+
+        }
+
+        .box3:hover {
+            transform: rotateZ(180deg);
+        } */
+    </style>
+</head>
+
+<body>
+
+
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+</body>
+
+</html>
