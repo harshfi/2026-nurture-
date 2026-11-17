@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .conatiner {
+            height: 100vh;
+            width: 100vw;
+
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            background-image: linear-gradient(to top, red, yellow);
+            border-radius: 50%;
+            transform: translate(0px, 600px);
+            animation-name: realDrop;
+            animation-duration: 6s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes realDrop {
+            0% {
+                transform: translate(0px, 600px);
+                /* transform: rotateZ(0deg); */
+            }
+
+            15% {
+                transform: translate(200px, 0px);
+                /* transform: rotateZ(180deg); */
+            }
+
+            30% {
+                transform: translate(400px, 600px);
+                /* transform: rotateZ(360deg); */
+            }
+
+            50% {
+                transform: translate(600px, 50px);
+                /* transform: rotateZ(540deg); */
+            }
+
+            70% {
+                transform: translate(800px, 600px);
+                /* transform: rotateZ(720deg); */
+            }
+
+            85% {
+                transform: translate(1000px, 100px);
+                /* transform: rotateZ(900deg); */
+            }
+
+            100% {
+                transform: translate(1200px, 600px);
+                /* transform: rotateZ(1080deg); */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

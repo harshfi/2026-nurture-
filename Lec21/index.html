@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border: 2px solid black;
+            display: flex;
+        }
+
+        .box1 {
+
+            margin: auto;
+            border: 2px solid black;
+            height: 200px;
+            width: 500px;
+            background-size: contain;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c8/Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original');
+        }
+
+        @media (orientation: portrait) {
+            body {
+                background-color: aqua;
+            }
+        }
+
+        /* @media (max-width:500px) {
+            .box {
+                flex-direction: column;
+            }
+        }
+
+        @media (min-width:501px) and (max-width:800px) {
+            .box {
+                flex-wrap: wrap;
+                background-color: aqua;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="box1">
+
+        </div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+    </div>
+</body>
+
+</html>
