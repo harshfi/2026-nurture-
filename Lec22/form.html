@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+
+
+<body>
+    <div class="form-field">
+        <label for="exampleGhostInput" class="form-label">Search</label>
+        <div class="d-flex align-items-center gap-3 p-3 border rounded-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" aria-hidden="true"
+                viewBox="0 0 16 16">
+                <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg>
+            <input type="search" class="form-ghost" id="exampleGhostInput" placeholder="Search docs"
+                aria-label="Search docs">
+        </div>
+    </div>
+    <div class="container border m-5" data-bs-validate novalidate>
+        <div class="form-field">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <div class="form-text">
+                We’ll never share your email with anyone else.
+            </div>
+        </div>
+
+        <div class="form-field">
+            <label for="exampleFormControlSelect2" class="form-label">Gender</label>
+            <select class="form-control" id="exampleFormControlSelect2">
+                <option>Choose one…</option>
+                <option value="1">Male</option>
+                <option value="2">female</option>
+                <option value="3">Donot want to disclose</option>
+            </select>
+        </div>
+
+        <div class="row g-3 align-items-center m-2">
+            <div class="col-auto">
+                <label for="inputPassword6" class="col-form-label">Password</label>
+            </div>
+            <div class="col-auto">
+                <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <div class="col-auto">
+                <span id="passwordHelpInline" class="form-text">
+                    Must be 8-20 characters long.
+                </span>
+            </div>
+        </div>
+
+        <div class="col-auto">
+            <button type="submit" class="btn-solid theme-primary mb-3">Confirm identity</button>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
+        crossorigin="anonymous"></script>
+    </head>
+</body>
+
+</html>
