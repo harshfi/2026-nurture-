@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background-color: #0f0f0f;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #0f0f0f;
+            height: 65px;
+        }
+
+        .youtube-logo {
+            color: red;
+            font-size: 28px;
+        }
+
+        .logo-text {
+            font-size: 23px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .search-box {
+            background-color: #121212;
+            border: 1px solid #303030;
+            color: white;
+            border-radius: 25px 0 0 25px;
+        }
+
+        .search-box:focus {
+            background-color: #121212;
+            color: white;
+            box-shadow: none;
+        }
+
+        .search-btn {
+            background-color: #272727;
+            color: white;
+            border-radius: 0 25px 25px 0;
+        }
+
+        .nav-icon {
+            font-size: 21px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #0f0f0f;
+            height: calc(100vh - 65px);
+            position: sticky;
+            top: 65px;
+            overflow-y: auto;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+
+        .sidebar a:hover {
+            background-color: #272727;
+        }
+
+        .sidebar i {
+            font-size: 20px;
+            margin-right: 20px;
+        }
+
+        /* Category buttons */
+        .categories {
+            background-color: #0f0f0f;
+            position: sticky;
+            top: 65px;
+            z-index: 10;
+            padding: 15px 0;
+        }
+
+        .category-btn {
+            background-color: #272727;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 15px;
+            white-space: nowrap;
+            font-size: 14px;
+        }
+
+        .category-btn.active,
+        .category-btn:hover {
+            background-color: white;
+            color: black;
+        }
+
+        /* Video cards */
+        .video-card {
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+
+        .thumbnail {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .video-card img {
+            transition: border-radius 0.2s;
+        }
+
+        .video-card img:hover {
+            border-radius: 0;
+        }
+
+        .channel-logo {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .video-title {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .video-info {
+            color: #aaa;
+            font-size: 13px;
+        }
+
+        .video-menu {
+            font-size: 20px;
+        }
+
+        @media(max-width: 768px) {
+            .sidebar {
+                display: none;
+            }
+
+            .logo-text {
+                font-size: 18px;
+            }
+
+            .search-container {
+                max-width: 160px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand fixed-top px-3">
+
+        <div class="d-flex align-items-center gap-3">
+            <i class="bi bi-list nav-icon"></i>
+
+            <div class="d-flex align-items-center">
+                <i class="bi bi-youtube youtube-logo"></i>
+                <span class="logo-text">YouTube</span>
+                <sup class="text-secondary ms-1">IN</sup>
+            </div>
+        </div>
+
+        <div class="mx-auto d-flex align-items-center search-container" style="width: 45%;">
+
+            <input type="text" class="form-control search-box" placeholder="Search">
+
+            <button class="btn search-btn px-4">
+                <i class="bi bi-search"></i>
+            </button>
+
+        </div>
+
+        <div class="d-flex align-items-center gap-4">
+            <i class="bi bi-mic-fill nav-icon"></i>
+            <i class="bi bi-camera-video nav-icon"></i>
+            <i class="bi bi-bell nav-icon"></i>
+
+            <img src="https://i.pravatar.cc/100?img=12" width="35" height="35" class="rounded-circle">
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+    <div class="container-fluid" style="padding-top: 65px;">
+
+        <div class="row">
+
+            <!-- SIDEBAR -->
+            <div class="col-md-2 col-lg-2 sidebar p-3">
+
+                <a href="#"><i class="bi bi-house-door-fill"></i>Home</a>
+                <a href="#"><i class="bi bi-play-btn"></i>Shorts</a>
+                <a href="#"><i class="bi bi-collection-play"></i>Subscriptions</a>
+
+                <hr class="border-secondary">
+
+                <h6 class="px-2">You ></h6>
+
+                <a href="#"><i class="bi bi-person"></i>Your Channel</a>
+                <a href="#"><i class="bi bi-clock-history"></i>History</a>
+                <a href="#"><i class="bi bi-play-circle"></i>Your Videos</a>
+                <a href="#"><i class="bi bi-clock"></i>Watch Later</a>
+                <a href="#"><i class="bi bi-hand-thumbs-up"></i>Liked Videos</a>
+
+                <hr class="border-secondary">
+
+                <h6 class="px-2">Explore</h6>
+
+                <a href="#"><i class="bi bi-fire"></i>Trending</a>
+                <a href="#"><i class="bi bi-music-note"></i>Music</a>
+                <a href="#"><i class="bi bi-controller"></i>Gaming</a>
+                <a href="#"><i class="bi bi-trophy"></i>Sports</a>
+
+            </div>
+
+
+            <!-- VIDEO SECTION -->
+            <div class="col-md-10 col-lg-10 col-12 px-4">
+
+                <!-- CATEGORIES -->
+                <div class="categories d-flex gap-3 overflow-auto">
+
+                    <button class="category-btn active">All</button>
+                    <button class="category-btn">Music</button>
+                    <button class="category-btn">Gaming</button>
+                    <button class="category-btn">Live</button>
+                    <button class="category-btn">Coding</button>
+                    <button class="category-btn">JavaScript</button>
+                    <button class="category-btn">React</button>
+                    <button class="category-btn">Comedy</button>
+                    <button class="category-btn">Movies</button>
+                    <button class="category-btn">Recently Uploaded</button>
+
+                </div>
+
+
+                <!-- VIDEOS -->
+                <div class="row mt-4">
+
+                    <!-- VIDEO 1 -->
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="video-card">
+
+                            <img class="thumbnail"
+                                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800" alt="Coding">
+
+                            <div class="d-flex gap-3 mt-3">
+
+                                <img src="https://i.pravatar.cc/100?img=11" class="channel-logo">
+
+                                <div class="flex-grow-1">
+                                    <h6 class="video-title">
+                                        Learn Full Stack Web Development
+                                        From Scratch
+                                    </h6>
+
+                                    <div class="video-info">
+                                        Code Academy <i class="bi bi-check-circle-fill"></i>
+                                        <br>
+                                        120K views • 2 days ago
+                                    </div>
+                                </div>
+
+                                <i class="bi bi-three-dots-vertical video-menu"></i>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- VIDEO 2 -->
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="video-card">
+
+                            <img class="thumbnail"
+                                src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800" alt="Music">
+
+                            <div class="d-flex gap-3 mt-3">
+
+                                <img src="https://i.pravatar.cc/100?img=22" class="channel-logo">
+
+                                <div class="flex-grow-1">
+                                    <h6 class="video-title">
+                                        Best Hindi Songs Collection
+                                        | Bollywood Hits
+                                    </h6>
+
+                                    <div class="video-info">
+                                        Music World
+                                        <br>
+                                        2.5M views • 1 week ago
+                                    </div>
+                                </div>
+
+                                <i class="bi bi-three-dots-vertical video-menu"></i>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- VIDEO 3 -->
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="video-card">
+
+                            <img class="thumbnail" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800"
+                                alt="Gaming">
+
+                            <div class="d-flex gap-3 mt-3">
+
+                                <img src="https://i.pravatar.cc/100?img=33" class="channel-logo">
+
+                                <div class="flex-grow-1">
+                                    <h6 class="video-title">
+                                        Top 10 Best Games You Must Play
+                                        in 2026
+                                    </h6>
+
+                                    <div class="video-info">
+                                        Gamer Zone
+                                        <br>
+                                        500K views • 3 days ago
+                                    </div>
+                                </div>
+
+                                <i class="bi bi-three-dots-vertical video-menu"></i>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- VIDEO 4 -->
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="video-card">
+
+                            <img class="thumbnail"
+                                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800"
+                                alt="Programming">
+
+                            <div class="d-flex gap-3 mt-3">
+
+                                <img src="https://i.pravatar.cc/100?img=45" class="channel-logo">
+
+                                <div class="flex-grow-1">
+                                    <h6 class="video-title">
+                                        Java Programming Complete
+                                        Course for Beginners
+                                    </h6>
+
+                                    <div class="video-info">
+                                        Programming Hub
+                                        <br>
+                                        800K views • 5 days ago
+                                    </div>
+                                </div>
+
+                                <i class="bi bi-three-dots-vertical video-menu"></i>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- VIDEO 5 -->
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="video-card">
+
+                            <img class="thumbnail"
+                                src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=800" alt="Travel">
+
+                            <div class="d-flex gap-3 mt-3">
+
+                                <img src="https://i.pravatar.cc/100?img=55" class="channel-logo">
+
+                                <div class="flex-grow-1">
+                                    <h6 class="video-title">
+                                        Exploring Beautiful Places
+                                        Around the World
+                                    </h6>
+
+                                    <div class="video-info">
+                                        Travel Diaries
+                                        <br>
+                                        1.2M views • 1 month ago
+                                    </div>
+                                </div>
+
+                                <i class="bi bi-three-dots-vertical video-menu"></i>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- VIDEO 6 -->
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="video-card">
+
+                            <img class="thumbnail" src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800"
+                                alt="Technology">
+
+                            <div class="d-flex gap-3 mt-3">
+
+                                <img src="https://i.pravatar.cc/100?img=66" class="channel-logo">
+
+                                <div class="flex-grow-1">
+                                    <h6 class="video-title">
+                                        The Future of Technology
+                                        and Artificial Intelligence
+                                    </h6>
+
+                                    <div class="video-info">
+                                        Tech Insider
+                                        <br>
+                                        900K views • 4 days ago
+                                    </div>
+                                </div>
+
+                                <i class="bi bi-three-dots-vertical video-menu"></i>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
